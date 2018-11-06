@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #0c0d14;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* шапка */
+.header {
+    background-color: #0d0c14;
+}
+
+.header-logo {
+    width: 253px;
+    height: 63px;
+}
+
+.site-navigation {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.site-navigation,
+.services-submenu {
+    list-style: none;
+}
+
+.site-navigation a {
+    color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: rgba(77, 188, 233, 0.6);
+}
+
+.site-navigation a:active,
+.site-navigation-item-current a {
+    color: #4dbce9;
+}
+
+.services-submenu {
+    font-size: 15px;
+    line-height: 40px;
+
+    background-color: #ffffff;
+}
+
+.services-submenu-item:hover,
+.services-submenu-item:focus {
+    background-color: #4dbce9;
+}
+
+.services-submenu-item:active {
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.services-submenu a,
+.services-submenu a:hover,
+.services-submenu a:focus,
+.services-submenu a:active {
+    color: #0d0c14;
+}
+
+/* описание компании */
+.company-description {
+    background-color: #0d0c14;
+}
+
+.company-description h2 {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+}
+
+.company-description p {
+    color: #4dbce9;
+}
+
+.btn {
+    font-weight: 400;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #4dbce9;
+    background-image: linear-gradient(30deg, #2a88e0 0%, #4dbce9 100%);
+}
+
+/* о нас */
+.about-us {
+    background-color: #f7f9f9;
+}
+
+.section-title {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.about-us-highlight {
+    color: #4dbce9;
+}
+
+.about-us-description {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.about-us-countries {
+    list-style: none;
+}
+
+.about-us-countries-item img {
+    width: 100px;
+    height: 66px;
+}
+
+.about-us-countries-item img.flag-japan {
+    width: 106px;
+    height: 72px;
+}
+
+.country-name {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+/* услуги */
+.our-services {
+    background-color: #ddebf1;
+}
+
+.our-services-list {
+    list-style: none;
+}
+
+.our-services-item {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
+}
+
+.our-services-item h3 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.our-services-item p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.media-buiyng h3 {
+    font-size: 50px;
+}
+
+.media-buiyng p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.btn-services {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* фидбэк */
+.feedback {
+    background-color: #4dbce9;
+}
+
+.btn-feedback {
+    font-size: 21px;
+}
+
+/* футер */
+.footer {
+    background-color: #0d0c14;
+}
+
+.footer p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* попапы */
+.popup {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
+}
+
+/* попап услуги  */
+.services-popup-list {
+    list-style: none;
+}
+
+.services-popup-item h3 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.services-popup-item p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* попап после отправки */
+.feedback-form-popup-reaction {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.feedback-form-popup-description {
+    line-height: 70px;
+}
+
+.feedback-form-popup-request {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    /*подобрать*/
+    font-weight: 400;
+    line-height: 30px;
+}
