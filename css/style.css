@@ -1,275 +1,391 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: "Oswald", sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 40px;
-    color: #0c0d14;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #0c0d14;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
-    position: absolute;
+  position: absolute;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* шапка */
 .header {
-    background-color: #0d0c14;
+  padding-top: 56px;
+  padding-bottom: 40px;
+  background-image: url(../img/header-layer.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #0d0c14;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
-    width: 253px;
-    height: 63px;
+  width: 253px;
+  height: 63px;
+}
+
+.main-navigation-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 670px;
 }
 
 .site-navigation {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .site-navigation,
 .services-submenu {
-    list-style: none;
+  list-style: none;
+}
+
+.site-navigation-item {
+  position: relative;
+  margin-left: 35px;
 }
 
 .site-navigation a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-    color: rgba(77, 188, 233, 0.6);
+  color: rgba(77, 188, 233, 0.6);
 }
 
 .site-navigation a:active,
 .site-navigation-item-current a {
-    color: #4dbce9;
+  color: #4dbce9;
 }
 
 .services-submenu {
-    font-size: 15px;
-    line-height: 40px;
+  display: none;
 
-    background-color: #ffffff;
+  position: absolute;
+  top: 40px;
+
+  width: 218px;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 40px;
+
+  background-color: #ffffff;
+  box-shadow: 0 5px 25px rgba(31, 28, 22, 0.8);
+}
+
+.services-submenu-item {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 33px;
+  padding-right: 33px;
+  margin-bottom: -1px;
+
+  border: 1px solid #d7e0e3;
+
+  cursor: pointer;
 }
 
 .services-submenu-item:hover,
 .services-submenu-item:focus {
-    background-color: #4dbce9;
+  background-color: #4dbce9;
 }
 
 .services-submenu-item:active {
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) inset;
 }
 
 .services-submenu a,
 .services-submenu a:hover,
 .services-submenu a:focus,
 .services-submenu a:active {
-    color: #0d0c14;
+  color: #0d0c14;
+}
+
+.site-navigation-item-services:hover .services-submenu {
+  display: block;
 }
 
 /* описание компании */
 .company-description {
-    background-color: #0d0c14;
+  padding-top: 73px;
+  padding-bottom: 120px;
+
+  background-image: url(../img/company-desc.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #0d0c14;
 }
 
 .company-description h2 {
-    font-size: 80px;
-    font-weight: 400;
-    line-height: normal;
-    color: #ffffff;
+  max-width: 670px;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 93px;
+  /*подбирать*/
+  color: #ffffff;
+
+  margin: 0;
+  margin-bottom: 55px;
 }
 
 .company-description p {
-    color: #4dbce9;
+  position: relative;
+  color: #4dbce9;
+
+  margin: 0;
+  margin-bottom: 65px;
+  max-width: 670px;
+  padding-left: 62px;
+}
+
+.company-description p::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 25px;
+  width: 3px;
+  height: 73px;
+  background-color: #4dbce9;
 }
 
 .btn {
-    font-weight: 400;
-    line-height: 40px;
-    color: #ffffff;
-    text-transform: uppercase;
-    background-color: #4dbce9;
-    background-image: linear-gradient(30deg, #2a88e0 0%, #4dbce9 100%);
+  display: block;
+  width: 270px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #4dbce9;
+  background-image: linear-gradient(30deg, #2a88e0 0%, #4dbce9 100%);
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 63px;
+  padding-right: 76px;
 }
 
 /* о нас */
 .about-us {
-    background-color: #f7f9f9;
+  background-color: #f7f9f9;
+  padding-top: 139px;
+  padding-bottom: 115px;
+}
+
+.about-us .container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .section-title {
-    font-size: 80px;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+.about-us p {
+  margin: 0;
 }
 
 .about-us-highlight {
-    color: #4dbce9;
+  width: 570px;
+  color: #4dbce9;
 }
 
 .about-us-description {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 27px;
+  width: 500px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
 }
 
 .about-us-countries {
-    list-style: none;
+  list-style: none;
 }
 
 .about-us-countries-item img {
-    width: 100px;
-    height: 66px;
+  width: 100px;
+  height: 66px;
 }
 
 .about-us-countries-item img.flag-japan {
-    width: 106px;
-    height: 72px;
+  width: 106px;
+  height: 72px;
 }
 
 .country-name {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 27px;
-    text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 27px;
+  text-transform: uppercase;
 }
 
 /* услуги */
 .our-services {
-    background-color: #ddebf1;
+  background-color: #ddebf1;
 }
 
 .our-services-list {
-    list-style: none;
+  list-style: none;
 }
 
 .our-services-item {
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
 }
 
 .our-services-item h3 {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .our-services-item p {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .media-buiyng h3 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .media-buiyng p {
-    font-size: 16px;
-    line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .btn-services {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 30px;
-    text-decoration: underline;
-    text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 /* фидбэк */
 .feedback {
-    background-color: #4dbce9;
+  background-color: #4dbce9;
 }
 
 .btn-feedback {
-    font-size: 21px;
+  font-size: 21px;
 }
 
 /* футер */
 .footer {
-    background-color: #0d0c14;
+  background-color: #0d0c14;
 }
 
 .footer p {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #ffffff;
-    text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 /* попапы */
 .popup {
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
 }
 
 /* попап услуги  */
 .services-popup-list {
-    list-style: none;
+  list-style: none;
 }
 
 .services-popup-item h3 {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: normal;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .services-popup-item p {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /* попап после отправки */
 .feedback-form-popup-reaction {
-    font-size: 50px;
-    line-height: 60px;
+  font-size: 50px;
+  line-height: 60px;
 }
 
 .feedback-form-popup-description {
-    line-height: 70px;
+  line-height: 70px;
 }
 
 .feedback-form-popup-request {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 15px;
-    /*подобрать*/
-    font-weight: 400;
-    line-height: 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  /*подобрать*/
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* сетка */
+.container {
+  box-sizing: border-box;
+  max-width: 1600px;
+  width: 100%;
+  padding-left: 215px;
+  padding-right: 215px;
+  margin: 0 auto;
 }
