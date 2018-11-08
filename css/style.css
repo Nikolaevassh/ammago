@@ -208,13 +208,19 @@ img {
   padding-bottom: 15px;
   padding-left: 63px;
   padding-right: 76px;
+
+  cursor: pointer;
 }
 
 /* о нас */
 .about-us {
-  background-color: #f7f9f9;
   padding-top: 139px;
   padding-bottom: 115px;
+
+  background-color: #f7f9f9;
+  background-image: url("../img/about-us.png");
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .about-us .container {
@@ -229,37 +235,51 @@ img {
   text-transform: uppercase;
 
   margin: 0;
+  margin-bottom: 62px;
 }
 
 .about-us p {
   margin: 0;
 }
 
-.about-us-highlight {
+p.about-us-highlight {
   width: 570px;
   color: #4dbce9;
+  margin-bottom: 55px;
 }
 
-.about-us-description {
+p.about-us-description {
   width: 500px;
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 27px;
+  margin-bottom: 65px;
 }
 
 .about-us-countries {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 466px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flag-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 72px;
+  background-color: #4dbce9;
+  background-image: linear-gradient(30deg, #2a88e0 0%, #4dbce9 100%);
 }
 
 .about-us-countries-item img {
   width: 100px;
   height: 66px;
-}
-
-.about-us-countries-item img.flag-japan {
-  width: 106px;
-  height: 72px;
 }
 
 .country-name {
@@ -272,56 +292,234 @@ img {
 
 /* услуги */
 .our-services {
+  padding-top: 70px;
+  padding-bottom: 70px;
   background-color: #ddebf1;
+  background-image: url("../img/our-services.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.our-services h2 {
+  text-align: center;
 }
 
 .our-services-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .our-services-item {
+  width: 394px;
+  padding-top: 50px;
+  padding-bottom: 28px;
+  padding-right: 66px;
+  padding-left: 50px;
   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: top right;
   box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
 }
 
 .our-services-item h3 {
+  margin: 0;
+  margin-bottom: 35px;
   font-size: 30px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 35px;
   text-transform: uppercase;
 }
 
 .our-services-item p {
+  margin: 0;
+  margin-bottom: 12px;
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
 }
 
-.media-buiyng h3 {
+.our-services-item-aso {
+  background-image: url("../img/aso.png");
+}
+
+.our-services-item-prod {
+  background-image: url("../img/creative-prod.png");
+}
+
+.our-services-item-retarget {
+  background-image: url("../img/retarget.png");
+}
+
+.our-services-item-consulting {
+  background-image: url("../img/consulting.png");
+}
+
+.our-services-item-media-buiyng {
+  background-image: url("../img/buying.png");
+}
+
+.our-services-item-media-buiyng h3 {
   font-size: 50px;
 }
 
-.media-buiyng p {
+.our-services-item-media-buiyng p {
   font-size: 16px;
   line-height: 20px;
 }
 
 .btn-services {
+  padding: 0;
+
   font-size: 15px;
   font-weight: 700;
   line-height: 30px;
   text-decoration: underline;
   text-transform: uppercase;
+
+  background: none;
+  border: none;
 }
 
 /* фидбэк */
 .feedback {
+  padding-top: 70px;
+  padding-bottom: 74px;
+  background-color: #4dbce9;
+  background-image: url("../img/contact-us.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.feedback h2 {
+  text-align: center;
+}
+
+.feedback-content {
+  position: relative;
+  width: 570px;
+  height: 534px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ddebf1;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  width: 510px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 70px;
+  padding-left: 70px;
+
+  background-color: #ffffff;
+}
+
+.feedback-form input {
+  width: 370px;
+  height: 43px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #0c0d14;
+  border: 1px solid #d7e0e3;
+  background-color: #ffffff;
+}
+
+.feedback-form input:last-of-type {
+  margin-bottom: 31px;
+}
+
+.feedback-form input::placeholder {
+  color: #0c0d14;
+}
+
+.feedback-form-product-type {
+  position: relative;
+}
+
+.feedback-product-type-list {
+  /* display: none; */
+  position: absolute;
+  top: 145px;
+  right: -170px;
+  width: 218px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 5px 25px rgba(31, 28, 22, 0.2);
+  list-style: none;
+}
+
+.feedback-product-type-item {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #0d0c14;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 26px;
+  padding-right: 26px;
+  margin-bottom: -1px;
+  border: 1px solid #d7e0e3;
+  cursor: pointer;
+}
+
+.feedback-product-type-item:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -7px;
+  width: 11px;
+  height: 11px;
+  background-color: #ffffff;
+  border: 1px solid #d7e0e3;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(45deg);
+}
+
+/* .feedback-product-type-item:first-of-type:hover .feedback-product-type-item:first-of-type::before {
+  background-color: #4dbce9;
+} */
+
+.feedback-product-type-item:hover {
   background-color: #4dbce9;
 }
 
+.feedback-product-type-item:active {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.feedback-product-type-item a {
+  color: #0d0c14;
+}
+
 .btn-feedback {
+  width: 230px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 52px;
+  padding-right: 52px;
   font-size: 21px;
+  border: none;
 }
 
 /* футер */
