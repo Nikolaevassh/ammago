@@ -44,8 +44,9 @@ img {
   padding-bottom: 40px;
   background-image: url(../img/header-layer.png);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: bottom;
   background-color: #0d0c14;
+  background-size: cover;
 }
 
 .main-navigation {
@@ -158,8 +159,9 @@ img {
 
   background-image: url(../img/company-desc.png);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
   background-color: #0d0c14;
+  background-size: cover;
 }
 
 .company-description h2 {
@@ -220,7 +222,8 @@ img {
   background-color: #f7f9f9;
   background-image: url("../img/about-us.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
+  background-size: cover;
 }
 
 .about-us .container {
@@ -389,7 +392,8 @@ p.about-us-description {
   background-color: #4dbce9;
   background-image: url("../img/contact-us.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
+  background-size: cover;
 }
 
 .feedback h2 {
@@ -495,12 +499,10 @@ p.about-us-description {
   transform: rotate(45deg);
 }
 
-/* .feedback-product-type-item:first-of-type:hover .feedback-product-type-item:first-of-type::before {
-  background-color: #4dbce9;
-} */
-
+.feedback-product-type-item:hover::before,
 .feedback-product-type-item:hover {
   background-color: #4dbce9;
+  border-color: #4dbce9;
 }
 
 .feedback-product-type-item:active {
@@ -524,7 +526,19 @@ p.about-us-description {
 
 /* футер */
 .footer {
+  padding-top: 28px;
+  padding-bottom: 28px;
   background-color: #0d0c14;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer img {
+  width: 183px;
+  height: 45px;
 }
 
 .footer p {
@@ -543,34 +557,164 @@ p.about-us-description {
 }
 
 /* попап услуги  */
+.services-popup {
+  position: relative;
+  width: 970px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 70px;
+  padding-right: 173px;
+
+  background-image: url("../img/buying_modal.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
 .services-popup-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .services-popup-item h3 {
+  margin: 0;
+  margin-bottom: 37px;
   font-size: 50px;
   font-weight: 400;
   line-height: normal;
 }
 
 .services-popup-item p {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
+.services-popup-item p:last-of-type {
+  margin-bottom: 38px;
+}
+
+.btn-services-popup {
+  height: 70px;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  padding-left: 48px;
+  padding-right: 70px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0;
+  right: -45px;
+
+  width: 27px;
+  height: 27px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.popup-close::before,
+.popup-close::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -4px;
+  width: 35px;
+  height: 3px;
+
+  background-color: #ffffff;
+}
+
+.popup-close::before {
+  transform: rotate(45deg);
+}
+
+.popup-close::after {
+  transform: rotate(-45deg);
+}
+
+.services-popup-back,
+.services-popup-next {
+  position: absolute;
+  top: 50%;
+
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  border: 1px solid #ddebf1;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.services-popup-back {
+  left: -35px;
+}
+
+.services-popup-next {
+  right: -35px;
+}
+
 /* попап после отправки */
-.feedback-form-popup-reaction {
+.feedback-form-popup {
+  position: relative;
+  width: 570px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  padding-left: 146px;
+  padding-right: 144px;
+  text-align: center;
+}
+
+.icon-success,
+.icon-fail {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 49px;
+  background-image: url("../img/modal-success.png");
+  background-repeat: no-repeat;
+}
+
+.feedback-form-popup p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-form-popup p:last-of-type {
+  margin-bottom: 0;
+}
+
+p.feedback-form-popup-reaction {
   font-size: 50px;
   line-height: 60px;
 }
 
-.feedback-form-popup-description {
+p.feedback-form-popup-description {
   line-height: 70px;
 }
 
-.feedback-form-popup-request {
+.icon-fail {
+  background-image: url("../img/modal-fail.png");
+}
+
+.feedback-form-popup-fail .feedback-form-popup-description {
+  margin-bottom: -10px;
+}
+
+p.feedback-form-popup-request {
   font-family: "Ubuntu", sans-serif;
   font-size: 15px;
   /*подобрать*/
@@ -583,7 +727,10 @@ p.about-us-description {
   box-sizing: border-box;
   max-width: 1600px;
   width: 100%;
-  padding-left: 215px;
-  padding-right: 215px;
+  padding-left: 60px;
+  padding-right: 60px;
   margin: 0 auto;
 }
+
+/* градиент */
+/* background-image: linear-gradient(30deg, #2a88e0 0%, #71d6ff 100%); */
