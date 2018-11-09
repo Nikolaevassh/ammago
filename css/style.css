@@ -301,24 +301,38 @@ p.about-us-description {
   background-image: url("../img/our-services.png");
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
 }
 
 .our-services h2 {
   text-align: center;
 }
 
-.our-services-list {
+/* .our-services-list {
   margin: 0;
   padding: 0;
   list-style: none;
+} */
+
+.our-services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.col-3 {
+  width: 370px;
+  margin-left: 30px;
 }
 
 .our-services-item {
-  width: 394px;
+  height: 254px;
+  width: 370px;
   padding-top: 50px;
-  padding-bottom: 28px;
-  padding-right: 66px;
+  padding-bottom: 27px;
+  padding-right: 45px;
   padding-left: 50px;
+  margin-bottom: 30px;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: top right;
@@ -360,6 +374,9 @@ p.about-us-description {
 }
 
 .our-services-item-media-buiyng {
+  height: 538px;
+  padding-top: 190px;
+  padding-right: 47px;
   background-image: url("../img/buying.png");
 }
 
