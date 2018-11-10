@@ -87,7 +87,15 @@ img {
 
 .site-navigation-item {
   position: relative;
-  margin-left: 35px;
+  margin-left: 55px;
+}
+
+.site-navigation-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
 }
 
 .site-navigation a {
@@ -102,6 +110,10 @@ img {
 .site-navigation a:active,
 .site-navigation-item-current a {
   color: #4dbce9;
+}
+
+.site-navigation-item-services .fa-angle-down {
+  margin-left: 10px;
 }
 
 .services-submenu {
@@ -123,7 +135,7 @@ img {
 .services-submenu-item {
   padding-top: 2px;
   padding-bottom: 2px;
-  padding-left: 33px;
+  padding-left: 13px;
   padding-right: 33px;
   margin-bottom: -1px;
 
@@ -139,6 +151,10 @@ img {
 
 .services-submenu-item:active {
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.services-submenu-item .fa-angle-right {
+  margin-right: 13px;
 }
 
 .services-submenu a,
@@ -204,14 +220,25 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #4dbce9;
-  background-image: linear-gradient(30deg, #2a88e0 0%, #4dbce9 100%);
+  background-image: linear-gradient(30deg, #2a88e0 0%, #71d6ff 100%);
 
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 63px;
-  padding-right: 76px;
-
+  padding-right: 43px;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-image: linear-gradient(30deg, #71d6ff 0%, #2a88e0 100%);
+}
+
+.btn:active {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.btn .fa-angle-right {
+  margin-left: 20px;
 }
 
 /* о нас */
@@ -329,7 +356,7 @@ p.about-us-description {
   height: 254px;
   width: 370px;
   padding-top: 50px;
-  padding-bottom: 27px;
+  padding-bottom: 20px;
   padding-right: 45px;
   padding-left: 50px;
   margin-bottom: 30px;
@@ -365,8 +392,16 @@ p.about-us-description {
   background-image: url("../img/creative-prod.png");
 }
 
+.our-services-item-prod h3 {
+  margin-bottom: 17px;
+}
+
 .our-services-item-retarget {
   background-image: url("../img/retarget.png");
+}
+
+.our-services-item-retarget p {
+  margin-bottom: 30px;
 }
 
 .our-services-item-consulting {
@@ -381,7 +416,9 @@ p.about-us-description {
 }
 
 .our-services-item-media-buiyng h3 {
+  margin-bottom: 40px;
   font-size: 50px;
+  line-height: 54px;
 }
 
 .our-services-item-media-buiyng p {
@@ -390,6 +427,8 @@ p.about-us-description {
 }
 
 .btn-services {
+  display: block;
+
   padding: 0;
 
   font-size: 15px;
@@ -400,6 +439,13 @@ p.about-us-description {
 
   background: none;
   border: none;
+
+  cursor: pointer;
+}
+
+.btn-services:hover,
+.btn-services:active {
+  color: #2d8de1;
 }
 
 /* фидбэк */
@@ -495,7 +541,7 @@ p.about-us-description {
   color: #0d0c14;
   padding-top: 1px;
   padding-bottom: 1px;
-  padding-left: 26px;
+  padding-left: 13px;
   padding-right: 26px;
   margin-bottom: -1px;
   border: 1px solid #d7e0e3;
@@ -528,6 +574,10 @@ p.about-us-description {
 
 .feedback-product-type-item a {
   color: #0d0c14;
+}
+
+.feedback-product-type-item .fa-angle-right {
+  margin-right: 6px;
 }
 
 .btn-feedback {
@@ -569,22 +619,28 @@ p.about-us-description {
 
 /* попапы */
 .popup {
+  display: none;
+  position: fixed;
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(31, 28, 22, 0.15);
 }
 
 /* попап услуги  */
 .services-popup {
-  position: relative;
+  top: 30px;
+  left: 50%;
   width: 970px;
   padding-top: 60px;
   padding-bottom: 40px;
   padding-left: 70px;
   padding-right: 173px;
+  margin-left: -435px;
 
   background-image: url("../img/buying_modal.png");
   background-repeat: no-repeat;
   background-position: right top;
+
+  z-index: 3;
 }
 
 .services-popup-list {
@@ -619,7 +675,6 @@ p.about-us-description {
   padding-top: 17px;
   padding-bottom: 18px;
   padding-left: 48px;
-  padding-right: 70px;
 }
 
 .popup-close {
@@ -658,6 +713,13 @@ p.about-us-description {
   transform: rotate(-45deg);
 }
 
+.popup-close:hover::before,
+.popup-close:hover::after,
+.popup-close:active::before,
+.popup-close:active::after {
+  background-color: #2d8de1;
+}
+
 .services-popup-back,
 .services-popup-next {
   position: absolute;
@@ -667,13 +729,20 @@ p.about-us-description {
   height: 70px;
   margin-top: -35px;
 
-  font-size: 0;
+  color: #9bcdf1;
 
   background-color: #ffffff;
   border: 1px solid #ddebf1;
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.services-popup-back:hover,
+.services-popup-next:hover,
+.services-popup-back:active,
+.services-popup-next:active {
+  color: #2d8de1;
 }
 
 .services-popup-back {
@@ -684,14 +753,27 @@ p.about-us-description {
   right: -35px;
 }
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 2;
+}
+
 /* попап после отправки */
 .feedback-form-popup {
-  position: relative;
+  top: 100px;
+  left: 50%;
   width: 570px;
   padding-top: 40px;
   padding-bottom: 45px;
   padding-left: 146px;
   padding-right: 144px;
+  margin-left: -285px;
   text-align: center;
 }
 
@@ -723,6 +805,10 @@ p.feedback-form-popup-description {
   line-height: 70px;
 }
 
+.feedback-form-popup-fail {
+  display: none;
+}
+
 .icon-fail {
   background-image: url("../img/modal-fail.png");
 }
@@ -748,6 +834,3 @@ p.feedback-form-popup-request {
   padding-right: 60px;
   margin: 0 auto;
 }
-
-/* градиент */
-/* background-image: linear-gradient(30deg, #2a88e0 0%, #71d6ff 100%); */
