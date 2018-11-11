@@ -121,7 +121,7 @@
                                 With deep understanding of algorithms and full transparency
                                 our goal is to bring the most valuable users
                             </p>
-                            <button class="btn-services">
+                            <button class="btn-services js-modal">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -135,7 +135,7 @@
                                 insights into account<br />
                                 So you can get more users!
                             </p>
-                            <button class="btn-services">
+                            <button class="btn-services js-modal">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -147,7 +147,7 @@
                                 We provide local instruments that help our customers get back
                                 their users in APAC region
                             </p>
-                            <button class="btn-services">
+                            <button class="btn-services js-modal">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -159,7 +159,7 @@
                                 Send us a request and we will help you with a strategy of
                                 reaching the market
                             </p>
-                            <button class="btn-services">
+                            <button class="btn-services js-modal">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -176,7 +176,7 @@
                                 With deep understanding of algorithms and full transparency
                                 our goal is to bring the most valuable users for our clients
                             </p>
-                            <button class="btn-services">
+                            <button class="btn-services js-modal">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -233,7 +233,7 @@
 
     <section class="popup services-popup">
         <ul class="services-popup-list">
-            <li class="services-popup-item">
+            <li class="services-popup-item services-popup-item-media-buying">
                 <h3>Media buying</h3>
                 <p>
                     We provide full media buying service for our clients among local
@@ -290,6 +290,25 @@
         </div>
         <button class="popup-close">close</button>
     </section>
+
+    <script>
+        var openButtonBuying = document.querySelector(".our-services-item-media-buiyng .js-modal");
+        var overlay = document.querySelector(".modal-overlay");
+        var closeButton = document.querySelector(".services-popup .popup-close");
+        var modal = document.querySelector(".services-popup");
+        var modalMediaBuying = document.querySelector(".services-popup-item-media-buying");
+
+        openButtonBuying.addEventListener("click", function () {
+            modal.classList.add("active");
+            overlay.classList.add("active");
+            modalMediaBuying.classList.add("active");
+        });
+
+        closeButton.addEventListener("click", function () {
+            modal.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    </script>
 </body>
 
 </html>
