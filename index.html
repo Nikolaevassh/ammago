@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AMMAGO Mobile Marketing</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Ubuntu" rel="stylesheet" />
@@ -15,12 +16,14 @@
     <header class="header">
         <div class="container">
             <nav class="main-navigation">
+                <button class="btn-mobile-navigation"></button>
                 <a class="header-logo">
                     <img src="img/logo-ammago.png" width="253" height="63" alt="Logo AMMAGO Mobile Marketing" />
                 </a>
                 <div class="main-navigation-right">
+                    <button class="btn-menu-close"><i class="fa fa-times"></i></button>
                     <ul class="site-navigation">
-                        <li class="site-navigation-item site-navigation-item-services site-navigation-item-current">
+                        <li class="site-navigation-item site-navigation-item-services">
                             <a href="#">Services<i class="fas fa-angle-down"></i></a>
                             <ul class="services-submenu">
                                 <li class="services-submenu-item">
@@ -57,7 +60,7 @@
             <div class="container">
                 <h2>Connecting developers with Asia marketing opportunities</h2>
                 <p>
-                    Acqure high-quality japanese users for your games<br />
+                    Acqure high-quality japanese users for your games<br class="hidden-sm" />
                     and apps through 100% clear traffic sources
                 </p>
                 <a class="btn btn-info" href="">More info<i class="fas fa-angle-right"></i></a>
@@ -121,13 +124,13 @@
                                 With deep understanding of algorithms and full transparency
                                 our goal is to bring the most valuable users
                             </p>
-                            <button class="btn-services js-modal">
+                            <button class="btn-services js-popup" data-popup="js-aso-popup">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
                         <div class="our-services-item our-services-item-prod">
                             <h3>
-                                Creative<br />
+                                Creative<br class="hidden-sm" />
                                 production
                             </h3>
                             <p>
@@ -135,7 +138,7 @@
                                 insights into account<br />
                                 So you can get more users!
                             </p>
-                            <button class="btn-services js-modal">
+                            <button class="btn-services js-popup" data-popup="js-prod-popup">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -147,7 +150,7 @@
                                 We provide local instruments that help our customers get back
                                 their users in APAC region
                             </p>
-                            <button class="btn-services js-modal">
+                            <button class="btn-services js-popup" data-popup="js-retarget-popup">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -159,13 +162,13 @@
                                 Send us a request and we will help you with a strategy of
                                 reaching the market
                             </p>
-                            <button class="btn-services js-modal">
+                            <button class="btn-services js-popup" data-popup="js-consulting-popup">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="our-services-item our-services-item-media-buiyng">
+                        <div class="our-services-item our-services-item-media-buying">
                             <h3>Media buying</h3>
                             <p>
                                 We provide full media buying service for our clients among
@@ -176,7 +179,7 @@
                                 With deep understanding of algorithms and full transparency
                                 our goal is to bring the most valuable users for our clients
                             </p>
-                            <button class="btn-services js-modal">
+                            <button class="btn-services js-popup" data-popup="js-buying-popup">
                                 More <i class="fas fa-angle-right"></i>
                             </button>
                         </div>
@@ -190,9 +193,19 @@
                 <h2 class="section-title">Contact us</h2>
                 <div class="feedback-content">
                     <form class="feedback-form" action="" method="POST">
-                        <input type="text" name="company-name" placeholder="Company name" id="feedback-company-name-field" />
-                        <input type="text" name="product-name" placeholder="Product name" id="feedback-product-name-field" />
-                        <a class="feedback-form-product-type" href="#">Choose product type</a>
+                        <input type="text" name="company-name" placeholder="Company name" id="feedback-company-name-field"
+                            required />
+                        <input type="text" name="product-name" placeholder="Product name" id="feedback-product-name-field"
+                            required />
+                        <select name="product-type" id="" required>
+                            <option value="casual_game">Casual game</option>
+                            <option value="hyper-casual_game">Hyper-casual game</option>
+                            <option value="mombile_slots">Mobile slots</option>
+                            <option value="midcore_game">Midcore game</option>
+                            <option value="hardcore_game">Hardcore game</option>
+                            <option value="non-gaming">Non-gaming mobile app</option>
+                        </select>
+                        <!-- <a class="feedback-form-product-type" href="#">Choose product type</a>
                         <ul class="feedback-product-type-list">
                             <li class="feedback-product-type-item">
                                 <a href="#"><i class="fas fa-angle-right"></i>Casual game</a>
@@ -212,9 +225,10 @@
                             <li class="feedback-product-type-item">
                                 <a href="#"><i class="fas fa-angle-right"></i>Non-gaming mobile app</a>
                             </li>
-                        </ul>
-                        <input type="text" name="url" placeholder="App Store/Google play URL" id="feedback-url-field" />
-                        <input type="email" name="email" placeholder="Contact Email" id="feedback-email-field" />
+                        </ul> -->
+                        <input type="text" name="url" placeholder="App Store/Google play URL" id="feedback-url-field"
+                            required />
+                        <input type="email" name="email" placeholder="Contact Email" id="feedback-email-field" required />
                         <input type="text" name="other-contacts" placeholder="Other contacts" id="feedback--other-contacts-field" />
                         <input type="text" name="other-info" placeholder="Other information" id="feedback-other-info-field" />
                         <button class="btn btn-feedback">Send request</button>
@@ -233,54 +247,63 @@
 
     <section class="popup services-popup">
         <ul class="services-popup-list">
-            <li class="services-popup-item services-popup-item-media-buying">
+            <li class="services-popup-item services-popup-item-aso js-aso-popup">
+
+                <h3>ASO</h3>
+                <div class="services-popup-item-content">
+                </div>
+            </li>
+            <li class="services-popup-item services-popup-item-media-buying js-buying-popup">
                 <h3>Media buying</h3>
-                <p>
-                    We provide full media buying service for our clients among local
-                    traffic sources such as local social services, CPI/CPC ad networks
-                    and incentivised medias.
-                </p>
-                <p>
-                    With deep understanding of algorithms and full transparency our goal
-                    is to bring the most valuable users for our clients. We provide full
-                    media buying service for our clients among local traffic sources
-                    such as local social services, CPI/CPC ad networks and incentivised
-                    medias. With deep understanding of algorithms and full transparency
-                    our goal is to bring the most valuable users for our clients.
-                </p>
-                <p>
-                    We provide full media buying service for our clients among local
-                    traffic sources such as local social services, CPI/CPC ad networks
-                    and incentivised medias. With deep understanding of algorithms and
-                    full transparency our goal is to bring the most valuable users for
-                    our clients. We provide full media buying service for our clients
-                    among local traffic sources such as local social services, CPI/CPC
-                    ad networks and incentivised medias. With deep understanding of
-                    algorithms and full transparency our goal is to bring the most
-                    valuable users for our clients. We provide full media buying service
-                    for our clients among local traffic sources such as local social
-                    services, CPI/CPC ad networks and incentivised medias.
-                </p>
+                <div class="services-popup-item-content">
+                    <p>
+                        We provide full media buying service for our clients among local
+                        traffic sources such as local social services, CPI/CPC ad networks
+                        and incentivised medias.
+                    </p>
+                    <p>
+                        With deep understanding of algorithms and full transparency our goal
+                        is to bring the most valuable users for our clients. We provide full
+                        media buying service for our clients among local traffic sources
+                        such as local social services, CPI/CPC ad networks and incentivised
+                        medias. With deep understanding of algorithms and full transparency
+                        our goal is to bring the most valuable users for our clients.
+                    </p>
+                    <p>
+                        We provide full media buying service for our clients among local
+                        traffic sources such as local social services, CPI/CPC ad networks
+                        and incentivised medias. With deep understanding of algorithms and
+                        full transparency our goal is to bring the most valuable users for
+                        our clients. We provide full media buying service for our clients
+                        among local traffic sources such as local social services, CPI/CPC
+                        ad networks and incentivised medias. With deep understanding of
+                        algorithms and full transparency our goal is to bring the most
+                        valuable users for our clients. We provide full media buying service
+                        for our clients among local traffic sources such as local social
+                        services, CPI/CPC ad networks and incentivised medias.
+                    </p>
+                </div>
                 <a class="btn btn-services-popup" href="#">Contact us<i class="fas fa-angle-right"></i></a>
-                <button class="popup-close">Close</button>
-                <button class="services-popup-back">
-                    <i class="fas fa-angle-left"></i><span class="visually-hidden">back</span>
-                </button>
-                <button class="services-popup-next">
-                    <i class="fas fa-angle-right"></i><span class="visually-hidden">next</span>
-                </button>
+
             </li>
         </ul>
+        <button class="popup-close">Close</button>
+        <button class="services-popup-back">
+            <i class="fas fa-angle-left"></i><span class="visually-hidden">back</span>
+        </button>
+        <button class="services-popup-next">
+            <i class="fas fa-angle-right"></i><span class="visually-hidden">next</span>
+        </button>
     </section>
     <div class="modal-overlay"></div>
 
     <section class="popup feedback-form-popup">
-        <div class="feedback-form-popup-success">
+        <div class="feedback-form-popup-success  feedback-form-popup-content">
             <div class="icon-success"></div>
             <p class="feedback-form-popup-reaction">Thank you!</p>
             <p class="feedback-form-popup-description">Request sent successfully</p>
         </div>
-        <div class="feedback-form-popup-fail">
+        <div class="feedback-form-popup-fail  feedback-form-popup-content">
             <div class="icon-fail"></div>
             <p class="feedback-form-popup-reaction">Oops...</p>
             <p class="feedback-form-popup-description">Something went wrong</p>
@@ -291,8 +314,8 @@
         <button class="popup-close">close</button>
     </section>
 
-    <script>
-        var openButtonBuying = document.querySelector(".our-services-item-media-buiyng .js-modal");
+    <!-- <script>
+        var openButtonBuying = document.querySelector(".our-services-item-media-buiyng .js-popup");
         var overlay = document.querySelector(".modal-overlay");
         var closeButton = document.querySelector(".services-popup .popup-close");
         var modal = document.querySelector(".services-popup");
@@ -308,7 +331,7 @@
             modal.classList.remove("active");
             overlay.classList.remove("active");
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
