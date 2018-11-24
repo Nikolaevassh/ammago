@@ -24,7 +24,7 @@
                     <button class="btn-menu-close"><i class="fa fa-times"></i></button>
                     <ul class="site-navigation">
                         <li class="site-navigation-item site-navigation-item-services">
-                            <a href="#">Services<i class="fas fa-angle-down"></i></a>
+                            <a href="#our-services">Services<i class="fas fa-angle-down"></i></a>
                             <ul class="services-submenu">
                                 <li class="services-submenu-item">
                                     <a href="#"><i class="fas fa-angle-right"></i>Media buying</a>
@@ -43,8 +43,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="site-navigation-item"><a href="#">Company</a></li>
-                        <li class="site-navigation-item"><a href="#">Contacts</a></li>
+                        <li class="site-navigation-item"><a href="#about-us">Company</a></li>
+                        <li class="site-navigation-item"><a href="#feedback">Contacts</a></li>
                         <li class="site-navigation-item"><a href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -63,11 +63,11 @@
                     Acqure high-quality japanese users for your games<br class="hidden-sm" />
                     and apps through 100% clear traffic sources
                 </p>
-                <a class="btn btn-info" href="">More info<i class="fas fa-angle-right"></i></a>
+                <a class="btn btn-info" href="#our-services">More info<i class="fas fa-angle-right"></i></a>
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about-us">
             <div class="container">
                 <div class="about-us-content">
                     <h2 class="section-title">About us</h2>
@@ -112,7 +112,7 @@
             </div>
         </section>
 
-        <section class="our-services">
+        <section class="our-services" id="our-services">
             <div class="container">
                 <h2 class="section-title">Our services</h2>
                 <div class="our-services-list">
@@ -188,7 +188,7 @@
             </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
             <div class="container">
                 <h2 class="section-title">Contact us</h2>
                 <div class="feedback-content">
@@ -283,7 +283,7 @@
                         services, CPI/CPC ad networks and incentivised medias.
                     </p>
                 </div>
-                <a class="btn btn-services-popup" href="#">Contact us<i class="fas fa-angle-right"></i></a>
+                <a class="btn btn-services-popup" href="#feedback">Contact us<i class="fas fa-angle-right"></i></a>
 
             </li>
         </ul>
@@ -313,6 +313,9 @@
         </div>
         <button class="popup-close">close</button>
     </section>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- <script>
         var openButtonBuying = document.querySelector(".our-services-item-media-buiyng .js-popup");
