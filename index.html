@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Ubuntu" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
@@ -48,8 +48,8 @@
                         <li class="site-navigation-item"><a href="#">Blog</a></li>
                     </ul>
                 </div>
-        </div>
-        </nav>
+
+            </nav>
         </div>
     </header>
 
@@ -192,12 +192,13 @@
             <div class="container">
                 <h2 class="section-title">Contact us</h2>
                 <div class="feedback-content">
-                    <form class="feedback-form" action="" method="POST">
+                    <form class="feedback-form" method="POST">
                         <input type="text" name="company-name" placeholder="Company name" id="feedback-company-name-field"
                             required />
                         <input type="text" name="product-name" placeholder="Product name" id="feedback-product-name-field"
                             required />
-                        <select name="product-type" id="" required>
+                        <select name="product-type" required>
+                            <option value="">Choose product type</option>
                             <option value="casual_game">Casual game</option>
                             <option value="hyper-casual_game">Hyper-casual game</option>
                             <option value="mombile_slots">Mobile slots</option>
@@ -205,27 +206,7 @@
                             <option value="hardcore_game">Hardcore game</option>
                             <option value="non-gaming">Non-gaming mobile app</option>
                         </select>
-                        <!-- <a class="feedback-form-product-type" href="#">Choose product type</a>
-                        <ul class="feedback-product-type-list">
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Casual game</a>
-                            </li>
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Hyper-casual game</a>
-                            </li>
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Mobile slots</a>
-                            </li>
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Midcore game</a>
-                            </li>
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Hardcore game</a>
-                            </li>
-                            <li class="feedback-product-type-item">
-                                <a href="#"><i class="fas fa-angle-right"></i>Non-gaming mobile app</a>
-                            </li>
-                        </ul> -->
+
                         <input type="text" name="url" placeholder="App Store/Google play URL" id="feedback-url-field"
                             required />
                         <input type="email" name="email" placeholder="Contact Email" id="feedback-email-field" required />
@@ -315,26 +296,8 @@
     </section>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
-    <!-- <script>
-        var openButtonBuying = document.querySelector(".our-services-item-media-buiyng .js-popup");
-        var overlay = document.querySelector(".modal-overlay");
-        var closeButton = document.querySelector(".services-popup .popup-close");
-        var modal = document.querySelector(".services-popup");
-        var modalMediaBuying = document.querySelector(".services-popup-item-media-buying");
-
-        openButtonBuying.addEventListener("click", function () {
-            modal.classList.add("active");
-            overlay.classList.add("active");
-            modalMediaBuying.classList.add("active");
-        });
-
-        closeButton.addEventListener("click", function () {
-            modal.classList.remove("active");
-            overlay.classList.remove("active");
-        });
-    </script> -->
 </body>
 
 </html>
